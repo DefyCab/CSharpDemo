@@ -13,6 +13,7 @@ namespace LogiskaSatser
 {
     public partial class MainWindow : Window
     {
+        #region Logiska Operatorer
         /* Logik är en stor del av hur programmet vet vad som ska hända
          * Vi har därför tillgång till ett antal olika Logiska Satser
          * och Operatorer.
@@ -91,7 +92,77 @@ namespace LogiskaSatser
          *          int x = 4, y = 5;
          *          x != y ger true.
          */
+        #endregion Logiska Operatorer
 
+        #region Logiska Satser
+        /* För att se exempel så behöver vi känna till Logiska Satser med:
+         * 
+         * 1. if-else if-else
+         * 2. switch-case
+         */
+
+        #region if-else if-else
+        /* 1.       if säger till programmet att den ska utvärdera en logisk sats.
+        *          om satsen värderas till true så kan koden i if-satsen läsas.
+        *          om satsen värderas till false så går programmet vidare till
+        *            slutet av if-satsen utan att gå in.
+        *                
+        *                if(logisk sats)       
+        *                {
+        *                    Kod att utföra
+        *                }
+        *          
+        *          Den logiska satsen kan vara enkel eller komplex.
+        *                
+        *                int x = 7, y = 13;
+        *                    if(x > y)     här blir resultatet false, så programmet
+        *                                      går inte in.
+        *                    if(y > x)     här blir resultatet true, så programmet
+        *                                      går in och läser av koden.
+        *                                
+        *          if-satser kan kolla om ett obegränsat antal logiska satser är
+        *           true eller false. else if kan användas för att utvärdera en
+        *           till sats.
+        *                
+        *                if(logisk sats)                | Om denna är false..
+        *                {                              |
+        *                    Kod att utföra             | så skippas denna kod, och..
+        *                }                              |
+        *                else if(en annan logisk sats)  | Denna sats utvärderas.
+        *                {                              
+        *                    Kod om denna sats är true  
+        *                }
+        *           
+        *           else if-satser värderas bara om if-satsen är false och om det finns
+        *           fler else if-satser så går programmet igenom dem i ordning. Det kan 
+        *           därför vara viktigt att välja ordningen man skriver dem i.
+        *           
+        *                if( 1 < 2)          | Denna är true så..
+        *                else if ( 2 > 1)    | ..denna syns aldrig.
+        *                
+        *                if ( 1 > 2)         |
+        *                else if ( 2 < 3)    | Nu är den första else if true..
+        *                else if ( 1 < 2)    | ..så den andra syns aldrig.
+        *                
+        *            Om man vill fånga in ett fall där if-satsen inte är true, men
+        *            man inte bryr sig om detaljerna så kan man i slutet ha en 
+        *            else-sats utan något logiskt uttryck.
+        *            
+        *            if (x > y)
+        *            {
+        *                true kod
+        *            }
+        *            else
+        *            {
+        *                kod här händer alltid om if-satsen är false!
+        *            }
+        *            
+        *            Man kan ha hur många else if-satser som man vill mellan
+        *            if och else.
+        */
+        #endregion if-else if-else
+
+        #endregion Logiska Satser
 
         public MainWindow()
         {
