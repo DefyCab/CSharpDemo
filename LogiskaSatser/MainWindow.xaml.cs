@@ -98,7 +98,7 @@ namespace LogiskaSatser
         /* För att se exempel så behöver vi känna till Logiska Satser med:
          * 
          * 1. if-else if-else
-         * 2. switch-case
+         * 2. switch-case (COMING SOON)
          */
 
         #region if-else if-else
@@ -112,7 +112,7 @@ namespace LogiskaSatser
         *                    Kod att utföra
         *                }
         *          
-        *          Den logiska satsen kan vara enkel eller komplex.
+        *          Den logiska satsen kan vara enkel eller komplex (vi tar komplexa längre ner).
         *                
         *                int x = 7, y = 13;
         *                    if(x > y)     här blir resultatet false, så programmet
@@ -167,6 +167,111 @@ namespace LogiskaSatser
         public MainWindow()
         {
             InitializeComponent();
+
+            // EXEMPEL 1 | enkel if-sats som kollar en boolean
+
+            bool isItRaining = true;
+
+            if (isItRaining) // här kollar programmet om isItRaining är true eller false
+            {
+                MessageBox.Show("Ta med ett paraply!"); // eftersom att det är true, händer detta
+            }
+            else // och else-satsen kolla aldrig!
+            {
+                MessageBox.Show("Sun's out, guns out!"); // denna messagebox visas bara om if(false)!
+            }
+
+            // EXEMPEL 2 | if - else if - else
+
+            // kolla igenom koden under, vad tror du kommer hända?
+
+            int score = 69;
+
+            if(score >= 90)
+            {
+                MessageBox.Show("Wow!");
+            }
+            else if (score >= 70)
+            {
+                MessageBox.Show("bra jobbat!");
+            }
+            else
+            {
+                MessageBox.Show("Nja, kanske plugga lite mer!");
+            }
+
+            // eftersom att score är mindre än både 90 och 70 så visar de false och
+            // programmet går in i else, som alltid händer om programmet når den.
+
+            // EXEMPEL 3 | Mer komplext villkår med && eller ||
+
+            // vad kommer programmet att göra?
+
+            int temperatureOutside = 22;
+            isItRaining = false;
+
+            if (temperatureOutside < 20 || isItRaining == true)
+            {
+                MessageBox.Show("kanske stannar hemma..");
+            }
+            else if (temperatureOutside > 20 && isItRaining == false)
+            {
+                MessageBox.Show("Köpa glass?");
+            }
+
+            /* Nu är temperaturen 22 graden, och det regnar inte.
+             *   den försa satsen koller om: temperatur mindre än 20
+             *    ELLER det regnar.
+             *   Det krävs bara att en av de två är true för att programmet
+             *   ska gå in..
+             *   Men eftersom att båda blir false i det här fallet så går programmet
+             *   vidare till else if-satsen.
+             *   Här måste båda villkåren vara true för att koden ska läsas.. och 
+             *   som tur så är det så!
+             */
+
+            // EXEMPEL 4 | Nästade if:s!
+
+            // det kanske ser läskigt ut, men läs igenom och försök att förstå vad som kommer
+            //  att hända.
+
+            string userRole = "Admin";
+            bool hasSuperAccess = false;
+
+            if (userRole == "Admin")
+            {
+                MessageBox.Show("Välkommen, administratör!");
+
+                if (hasSuperAccess) // eftersom en boolean variabel redan är true eller false
+                {                   //   så behöver man inte skriva ut == true/false!
+                    MessageBox.Show("Du har full behörighet!");
+                }
+                else
+                {
+                    MessageBox.Show("Du har begränsad behörighet.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Välkommen, standardanvändare.");
+            }
+
+            /* när man har en if inuti en annan if kallas "nästade if:s". Det används vanligtvis
+             * för att kolla relaterade men mer specifika villkår ju djupare man går.
+             * 
+             * I vårat fall så kollar den första om man har "Admin" som roll och visar ett Admin
+             * medelande om det är sannt. Annars får användaren ett vanligt medelande.
+             * 
+             * i exemplet så är användaren Admin, så programmet går in!
+             * 
+             * Inuti finns en till if-sats, som kollar om en Admin också har SuperAccess. Den checken
+             * kan bara hända om man redan är Admin!
+             * 
+             * Om man har SuperAccess så får man full kontrol, annars har man begränsad behörighet.
+             * 
+             * Vår användare har Admin men inte SuperAccess, så hen kommer inte in i den nästade
+             * if-satsen.
+             */
         }
     }
 }
