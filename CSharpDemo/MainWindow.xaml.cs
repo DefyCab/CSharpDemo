@@ -19,7 +19,7 @@ namespace CSharpDemo
             InitializeComponent();
         }
 
-        //I variabler kan man lagra värden.
+        //I variabler kan man lagra värden. Variabel har ett namn, en datatyp och ett värde.
         private void VariablerOchDatatyper()
         {
             int heltal = 10;
