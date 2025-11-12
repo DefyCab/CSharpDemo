@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpDemo", "CSharpDemo\CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicStructure", "BasicStructure\BasicStructure.csproj", "{F4284170-CB66-42BB-8D81-36C95DAEC8FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogiskaSatser", "LogiskaSatser\LogiskaSatser.csproj", "{42369604-8044-4359-AC1B-AAFE547C4E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F4284170-CB66-42BB-8D81-36C95DAEC8FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4284170-CB66-42BB-8D81-36C95DAEC8FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4284170-CB66-42BB-8D81-36C95DAEC8FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42369604-8044-4359-AC1B-AAFE547C4E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42369604-8044-4359-AC1B-AAFE547C4E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42369604-8044-4359-AC1B-AAFE547C4E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42369604-8044-4359-AC1B-AAFE547C4E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
