@@ -52,12 +52,14 @@ namespace CSharpDemo
             // Här loopar jag över nummerarrayn och fyller på med värden från
             // nummerarrayen på rad 33. Den kommer loopa så länge i är mindre än 
             // längden på arrayen.
-            int[] nioNummer = [1, 2, 3];
+
+            int[] treNummer = [1, 2, 3];
             int[] nummerArray = new int[3];
+
             // i ökar med ett steg varje varv.
             for (int i = 0; i < nummerArray.Length; i++)
             {
-                nummerArray[i] = nioNummer[i];
+                nummerArray[i] = treNummer[i];
             }
 
             // Varv 1 
