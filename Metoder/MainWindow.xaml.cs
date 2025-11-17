@@ -31,8 +31,8 @@ namespace Metoder
             SumOfTwoNumbers();
             MessageBox.Show($"{_sum}");
 
-            // man kan visa upp resultat såhär också utan att spara i en variabel
-            // som på rad 41.
+            // man kan visa upp resultat såhär också utan att spara i en variabel.
+            // På rad 41 sparas istället värdet som returneras till en variabel.
             MessageBox.Show(SumOfTwoNumbersWithReturn(fem, sex).ToString());
 
             int showNumber;
