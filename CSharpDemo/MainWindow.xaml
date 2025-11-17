@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="117" Margin="67,42,0,0" VerticalAlignment="Top" Width="216"/>
+        <Button x:Name="button" Content="KNAPP" HorizontalAlignment="Left" Height="117" Margin="67,42,0,0" VerticalAlignment="Top" Width="216" Click="ClickToCompareCars" Background="LightGreen" FontWeight="Bold" FontSize="18"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="117" Margin="351,42,0,0" TextWrapping="Wrap" Text="Jag är en textbox!" VerticalAlignment="Top" Width="221" FontSize="20" FontWeight="Bold"/>
 
     </Grid>
